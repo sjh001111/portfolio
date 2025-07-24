@@ -8,7 +8,7 @@ export default function Home() {
             <span className="text-blue-400">Joonghyuk Seong</span>
           </h1>
           <p className="text-xl text-white/80">
-            Frontend Developer
+            Software Developer
           </p>
         </div>
         
