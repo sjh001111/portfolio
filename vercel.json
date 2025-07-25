@@ -1,12 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/jobmatch/:path*",
-      "destination": "https://jobmatch-frontend.vercel.app/:path*"
+      "destination": "https://jobmatch-frontend.vercel.app/:path*",
+      "permanent": false
     },
     {
-      "source": "/twihub/:path*",
-      "destination": "https://twihub-frontend.vercel.app/:path*"
+      "source": "/twihub/:path*", 
+      "destination": "https://twihub-frontend.vercel.app/:path*",
+      "permanent": false
     }
   ],
   "headers": [
