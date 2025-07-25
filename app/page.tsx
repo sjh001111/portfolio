@@ -1,11 +1,14 @@
+import { Mail, Github, ChevronDown } from 'lucide-react'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+      {/* About Me Section */}
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Joonghyuk Seong
               </span>
@@ -13,27 +16,115 @@ export default function Home() {
             <p className="text-2xl md:text-3xl text-gray-300 mb-4">
               Full-Stack Developer & AI Enthusiast
             </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Python-focused developer with expertise in AI, computer vision, and web technologies.
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
+              Python-focused developer with expertise in AI, web technologies, and system automation.
               Recent UTS graduate with Dean&apos;s List recognition.
             </p>
+            
+            {/* Contact Buttons */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="mailto:sjh001111@gmail.com" 
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              >
+                <Mail size={20} />
+                <span>Contact Me</span>
+              </a>
+              <a 
+                href="https://github.com/sjh001111" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
+              >
+                <Github size={20} />
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <a 
-              href="mailto:sjh001111@gmail.com" 
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-            >
-              Contact Me
-            </a>
-            <a 
-              href="https://github.com/sjh001111" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
-            >
-              GitHub
-            </a>
+          {/* Info Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Education */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
+                  <p className="text-gray-300">Bachelor of Science in Information Technology</p>
+                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
+                </div>
+                <div className="flex flex-wrap gap-4 text-sm mb-4">
+                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                    GPA 6.38/7.00
+                  </span>
+                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
+                    WAM 84.12/100
+                  </span>
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
+                    Dean&apos;s List
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  <a 
+                    href="/resume.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📄 Resume
+                  </a>
+                  <a 
+                    href="/transcript.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📜 Transcript
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Core Technologies */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Core Technologies</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Primary Focus</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Next.js", "TypeScript", "FastAPI"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">AI & Data</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["OpenCV", "YOLOv11", "PyTorch", "Computer Vision"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Infrastructure</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["AWS", "MongoDB", "PostgreSQL", "Git"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+            <p className="text-gray-400 text-sm mb-2">Explore My Work</p>
+            <ChevronDown className="mx-auto animate-bounce text-gray-400" size={24} />
           </div>
         </div>
       </section>
@@ -58,7 +149,7 @@ export default function Home() {
               <div className="mb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="text-2xl font-semibold text-white">
-                    JobMatch Platform
+                    JobMatch
                   </h3>
                   <span className="px-2 py-1 bg-green-600/20 text-green-400 rounded-full text-xs font-medium">
                     LIVE
@@ -75,7 +166,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["TypeScript", "React", "Python", "AI/ML"].map((tech) => (
+                  {["Next.js", "FastAPI", "Python", "AI/ML"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
                       {tech}
                     </span>
@@ -134,7 +225,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Node.js", "Express", "Video Processing"].map((tech) => (
+                  {["Next.js", "FastAPI", "Python", "Video Processing"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm">
                       {tech}
                     </span>
@@ -281,14 +372,14 @@ export default function Home() {
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
-                Automated potion management system for Path of Exile 2. Features intelligent health 
-                monitoring and automatic potion usage with customisable thresholds and safety mechanisms. 
-                Popular community tool with 8 stars.
+                Automated potion management system for Path of Exile 2. Uses memory reading to monitor 
+                health and mana levels, automatically consuming potions with customisable thresholds 
+                and safety mechanisms. Popular community tool with 8 stars.
               </p>
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "Computer Vision", "Game Automation"].map((tech) => (
+                  {["Python", "Memory Reading", "Game Automation"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
                       {tech}
                     </span>
@@ -325,7 +416,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "aiohttp", "lxml", "Gemini API"].map((tech) => (
+                  {["Python", "aiohttp", "lxml", "AI/ML"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
                       {tech}
                     </span>
@@ -375,132 +466,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Me Section */}
-      <section className="py-16 px-6 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              About Me
-            </span>
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Education */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
-              <div className="space-y-3">
-                <div>
-                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
-                  <p className="text-gray-300">Bachelor of Science in Information Technology</p>
-                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
-                </div>
-                <div className="flex flex-wrap gap-4 text-sm mb-4">
-                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
-                    GPA 6.38/7.00
-                  </span>
-                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
-                    WAM 84.12/100
-                  </span>
-                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
-                    Dean&apos;s List
-                  </span>
-                </div>
-                <div className="flex gap-2">
-                  <a 
-                    href="/resume.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📄 Resume
-                  </a>
-                  <a 
-                    href="/transcript.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📜 Transcript
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Skills Overview */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Core Technologies</h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">Primary Focus</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["Python", "React", "TypeScript", "Node.js"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">AI & Data</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["OpenCV", "YOLOv11", "PyTorch", "Computer Vision"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">Infrastructure</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["AWS", "MongoDB", "PostgreSQL", "Git"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-6 bg-gray-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Get In Touch
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            I&apos;m always interested in discussing new opportunities, projects, or just chatting about technology.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6">
-            <a 
-              href="mailto:sjh001111@gmail.com"
-              className="flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-            >
-              <span>Email Me</span>
-            </a>
-            <a 
-              href="https://github.com/sjh001111"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
-            >
-              <span>GitHub</span>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2025 Joonghyuk Seong. Built with Next.js and Tailwind CSS.
+            © 2025 Joonghyuk Seong.
           </p>
         </div>
       </footer>
