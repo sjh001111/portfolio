@@ -34,145 +34,37 @@ export default function Home() {
             >
               GitHub
             </a>
-            <a 
-              href="/resume.pdf" 
-              download
-              className="px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
-            >
-              Download Resume
-            </a>
           </div>
         </div>
       </section>
 
-      {/* Education Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Education
-            </span>
-          </h2>
-          
-          <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
-                  University of Technology Sydney (UTS)
-                </h3>
-                <p className="text-lg text-blue-400 mb-2">
-                  Bachelor of Science in Information Technology
-                </p>
-                <p className="text-gray-400">Enterprise Systems Development</p>
-              </div>
-              <div className="text-right mt-4 md:mt-0">
-                <p className="text-gray-300 font-medium">Feb 2019 – Nov 2024</p>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-              <div className="bg-gray-700/50 rounded-lg p-4">
-                <p className="text-2xl font-bold text-blue-400">6.38/7.00</p>
-                <p className="text-gray-300">GPA</p>
-              </div>
-              <div className="bg-gray-700/50 rounded-lg p-4">
-                <p className="text-2xl font-bold text-cyan-400">84.12/100</p>
-                <p className="text-gray-300">WAM</p>
-              </div>
-              <div className="bg-gray-700/50 rounded-lg p-4">
-                <p className="text-lg font-bold text-yellow-400">Dean&apos;s List</p>
-                <p className="text-gray-300">2022, 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Skills Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Technical Skills
-            </span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "C++", "C#", "C", "Java", "JavaScript"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">Web Technologies</h3>
-              <div className="flex flex-wrap gap-2">
-                {["HTML", "CSS", "PHP", "SQL", "React", "Node.js", "Express"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">AI & ML</h3>
-              <div className="flex flex-wrap gap-2">
-                {["OpenCV", "YOLOv11", "PyTorch", "Computer Vision"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Cloud & Databases</h3>
-              <div className="flex flex-wrap gap-2">
-                {["AWS", "PostgreSQL", "MongoDB", "MySQL"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-orange-400">Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Git", "Jira", "Confluence", "Django"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
+      {/* Live Projects Section */}
       <section className="py-20 px-6 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                Live Projects
+              </span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Interactive applications you can explore right now
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {/* JobMatch - Full Stack Job Matching Platform */}
-            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-colors h-full flex flex-col">
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 h-full flex flex-col">
               <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-white mb-2">
-                  JobMatch Platform
-                </h3>
-                <p className="text-blue-400 font-medium">Full-Stack Web App • Mid 2025</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-semibold text-white">
+                    JobMatch Platform
+                  </h3>
+                  <span className="px-2 py-1 bg-green-600/20 text-green-400 rounded-full text-xs font-medium">
+                    LIVE
+                  </span>
+                </div>
+                <p className="text-blue-400 font-medium">Full-Stack Web App • 2025</p>
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
@@ -192,12 +84,12 @@ export default function Home() {
                 
                 <div className="flex flex-col gap-2">
                   <a 
-                    href="https://jobmatch-frontend.vercel.app" 
+                    href="/jobmatch" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-center"
+                    className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-center font-medium"
                   >
-                    Live Demo
+                    🚀 Launch App
                   </a>
                   <div className="flex gap-2">
                     <a 
@@ -221,24 +113,87 @@ export default function Home() {
               </div>
             </div>
 
-            {/* AI Product Recommendation System */}
-            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-colors h-full flex flex-col">
+            {/* TwiHub - Twitter Video Downloader */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 h-full flex flex-col">
               <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-white mb-2">
-                  AI Recommendation System
-                </h3>
-                <p className="text-purple-400 font-medium">Personal Project • 2023-2025</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-semibold text-white">
+                    TwiHub
+                  </h3>
+                  <span className="px-2 py-1 bg-green-600/20 text-green-400 rounded-full text-xs font-medium">
+                    LIVE
+                  </span>
+                </div>
+                <p className="text-cyan-400 font-medium">Video Downloader • 2025</p>
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
-                Automated system that scrapes product recommendation requests from online forums, 
-                analyses them using AI to generate personalised recommendations, and converts them 
-                into affiliate marketing links.
+                Twitter video download platform that allows users to easily save videos from Twitter posts. 
+                Features clean interface, fast processing, and support for various video qualities and formats.
               </p>
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "aiohttp", "lxml", "Gemini API"].map((tech) => (
+                  {["React", "Node.js", "Express", "Video Processing"].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href="/twihub" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-center font-medium"
+                  >
+                    🎥 Try TwiHub
+                  </a>
+                  <div className="flex gap-2">
+                    <a 
+                      href="https://github.com/sjh001111/twihub-frontend" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors text-center text-sm"
+                    >
+                      Frontend
+                    </a>
+                    <a 
+                      href="https://github.com/sjh001111/twihub-backend" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors text-center text-sm"
+                    >
+                      Backend
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Portfolio Website */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 h-full flex flex-col">
+              <div className="mb-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-semibold text-white">
+                    Portfolio Website
+                  </h3>
+                  <span className="px-2 py-1 bg-green-600/20 text-green-400 rounded-full text-xs font-medium">
+                    LIVE
+                  </span>
+                </div>
+                <p className="text-purple-400 font-medium">Personal Website • 2025</p>
+              </div>
+              
+              <p className="text-gray-300 mb-6 flex-grow">
+                Modern, responsive portfolio website showcasing my projects and skills. Built with Next.js 
+                and Tailwind CSS, featuring dark mode design and optimised performance.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {["Next.js", "TypeScript", "Tailwind CSS", "Vercel"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
                       {tech}
                     </span>
@@ -246,20 +201,46 @@ export default function Home() {
                 </div>
                 
                 <div className="flex flex-col gap-2">
-                  <div className="px-4 py-2 bg-gray-700 rounded-lg text-center text-gray-400">
-                    Private Project
+                  <div className="px-4 py-2 bg-green-600/20 text-green-400 rounded-lg text-center font-medium">
+                    ✨ You&apos;re here now!
                   </div>
+                  <a 
+                    href="https://github.com/sjh001111/portfolio" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors text-center text-sm"
+                  >
+                    View Source
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Vehicle License Plate Detection */}
+      {/* Archive Projects Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-gray-400 to-blue-400 bg-clip-text text-transparent">
+                Archive Projects
+              </span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Past projects and academic work
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* YOLO License Plate Detection */}
             <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-colors h-full flex flex-col">
               <div className="mb-4">
                 <h3 className="text-2xl font-semibold text-white mb-2">
                   YOLO License Plate Detection
                 </h3>
-                <p className="text-cyan-400 font-medium">Computer Vision • Late 2024</p>
+                <p className="text-cyan-400 font-medium">Computer Vision • 2024</p>
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
@@ -301,7 +282,7 @@ export default function Home() {
               
               <p className="text-gray-300 mb-6 flex-grow">
                 Automated potion management system for Path of Exile 2. Features intelligent health 
-                monitoring and automatic potion usage with customizable thresholds and safety mechanisms. 
+                monitoring and automatic potion usage with customisable thresholds and safety mechanisms. 
                 Popular community tool with 8 stars.
               </p>
               
@@ -327,13 +308,45 @@ export default function Home() {
               </div>
             </div>
 
+            {/* AI Product Recommendation System */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 opacity-75 h-full flex flex-col">
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  AI Recommendation System
+                </h3>
+                <p className="text-purple-400 font-medium">Personal Project • 2023-2025</p>
+              </div>
+              
+              <p className="text-gray-300 mb-6 flex-grow">
+                Automated system that scrapes product recommendation requests from online forums, 
+                analyses them using AI to generate personalised recommendations, and converts them 
+                into affiliate marketing links.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "aiohttp", "lxml", "Gemini API"].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <div className="px-4 py-2 bg-gray-700/50 rounded-lg text-center text-gray-500">
+                    Private Project
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* EWB Electricity Metres */}
-            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-orange-500/50 transition-colors h-full flex flex-col">
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 opacity-75 h-full flex flex-col">
               <div className="mb-4">
                 <h3 className="text-2xl font-semibold text-white mb-2">
                   EWB Electricity Monitoring
                 </h3>
-                <p className="text-orange-400 font-medium">Team Project • Late 2024</p>
+                <p className="text-orange-400 font-medium">Team Project • 2024</p>
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
@@ -352,7 +365,7 @@ export default function Home() {
                 </div>
                 
                 <div className="flex flex-col gap-2">
-                  <div className="px-4 py-2 bg-gray-700 rounded-lg text-center text-gray-400">
+                  <div className="px-4 py-2 bg-gray-700/50 rounded-lg text-center text-gray-500">
                     University Project
                   </div>
                 </div>
@@ -362,8 +375,97 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section className="py-16 px-6 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center">
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Education */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
+                  <p className="text-gray-300">Bachelor of Science in Information Technology</p>
+                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
+                </div>
+                <div className="flex flex-wrap gap-4 text-sm mb-4">
+                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                    GPA 6.38/7.00
+                  </span>
+                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
+                    WAM 84.12/100
+                  </span>
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
+                    Dean&apos;s List
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  <a 
+                    href="/resume.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📄 Resume
+                  </a>
+                  <a 
+                    href="/transcript.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📜 Transcript
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Skills Overview */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Core Technologies</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Primary Focus</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "React", "TypeScript", "Node.js"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">AI & Data</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["OpenCV", "YOLOv11", "PyTorch", "Computer Vision"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Infrastructure</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["AWS", "MongoDB", "PostgreSQL", "Git"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-gray-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -389,20 +491,6 @@ export default function Home() {
               className="flex items-center gap-3 px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
             >
               <span>GitHub</span>
-            </a>
-            <a 
-              href="/resume.pdf"
-              download
-              className="flex items-center gap-3 px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
-            >
-              <span>Resume</span>
-            </a>
-            <a 
-              href="/transcript.pdf"
-              download
-              className="flex items-center gap-3 px-6 py-3 border border-gray-600 hover:border-gray-500 rounded-lg transition-colors"
-            >
-              <span>Transcript</span>
             </a>
           </div>
         </div>
