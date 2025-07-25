@@ -15,7 +15,7 @@ export default function Home() {
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Python-focused developer with expertise in AI, computer vision, and web technologies.
-              Recent UTS graduate with Dean's List recognition.
+              Recent UTS graduate with Dean&apos;s List recognition.
             </p>
           </div>
           
@@ -80,7 +80,7 @@ export default function Home() {
                 <p className="text-gray-300">WAM</p>
               </div>
               <div className="bg-gray-700/50 rounded-lg p-4">
-                <p className="text-lg font-bold text-yellow-400">Dean's List</p>
+                <p className="text-lg font-bold text-yellow-400">Dean&apos;s List</p>
                 <p className="text-gray-300">2022, 2025</p>
               </div>
             </div>
@@ -372,7 +372,7 @@ export default function Home() {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm always interested in discussing new opportunities, projects, or just chatting about technology.
+            I&apos;m always interested in discussing new opportunities, projects, or just chatting about technology.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6">
