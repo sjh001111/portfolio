@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+          <div className="mt-16 text-center">
             <p className="text-gray-400 text-sm mb-2">Explore My Work</p>
             <ChevronDown className="mx-auto animate-bounce text-gray-400" size={24} />
           </div>
