@@ -115,10 +115,13 @@ export default function Home() {
         </div>
         
         {/* Scroll Indicator - Bottom */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+        <button 
+          onClick={() => handleNavClick('live-projects')}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center hover:text-gray-300 transition-colors cursor-pointer"
+        >
           <p className="text-gray-500 text-sm mb-2">See My Projects</p>
           <ChevronDown className="mx-auto animate-bounce text-gray-500" size={20} />
-        </div>
+        </button>
       </section>
 
       {/* Live Projects Section */}
@@ -474,15 +477,15 @@ export default function Home() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Education */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 flex flex-col">
               <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
-              <div className="space-y-3">
-                <div>
+              <div className="flex-grow">
+                <div className="mb-4">
                   <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
                   <p className="text-gray-300">Bachelor of Science in Information Technology</p>
                   <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm mb-4">
+                <div className="flex flex-wrap gap-4 text-sm mb-6">
                   <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
                     GPA 6.38/7.00
                   </span>
@@ -493,22 +496,22 @@ export default function Home() {
                     Dean&apos;s List
                   </span>
                 </div>
-                <div className="flex gap-2">
-                  <a 
-                    href="/resume.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📄 Resume
-                  </a>
-                  <a 
-                    href="/transcript.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📜 Transcript
-                  </a>
-                </div>
+              </div>
+              <div className="flex gap-2 mt-auto">
+                <a 
+                  href="/resume.pdf" 
+                  download
+                  className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                >
+                  📄 Resume
+                </a>
+                <a 
+                  href="/transcript.pdf" 
+                  download
+                  className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                >
+                  📜 Transcript
+                </a>
               </div>
             </div>
 
