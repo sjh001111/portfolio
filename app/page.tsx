@@ -395,7 +395,7 @@ export default function Home() {
             </div>
 
             {/* AI Product Recommendation System */}
-            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 opacity-75 h-full flex flex-col">
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-colors h-full flex flex-col">
               <div className="mb-4">
                 <h3 className="text-2xl font-semibold text-white mb-2">
                   AI Recommendation System
@@ -427,7 +427,7 @@ export default function Home() {
             </div>
 
             {/* EWB Electricity Metres */}
-            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 opacity-75 h-full flex flex-col">
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-orange-500/50 transition-colors h-full flex flex-col">
               <div className="mb-4">
                 <h3 className="text-2xl font-semibold text-white mb-2">
                   EWB Electricity Monitoring
@@ -453,6 +453,70 @@ export default function Home() {
                 <div className="flex flex-col gap-2">
                   <div className="px-4 py-2 bg-gray-700/50 rounded-lg text-center text-gray-500">
                     University Project
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Virtual HID Implementation */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-colors h-full flex flex-col">
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Hardware Input Research
+                </h3>
+                <p className="text-purple-400 font-medium">Security Research • 2024</p>
+              </div>
+              
+              <p className="text-gray-300 mb-6 flex-grow">
+                Security research project analysing hardware input simulation and driver vulnerabilities 
+                for defensive purposes. Studied cross-vendor compatibility patterns and documented 
+                security weaknesses to improve system protection.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "C++", "Windows API", "Driver Analysis"].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <div className="px-4 py-2 bg-gray-700/50 rounded-lg text-center text-gray-500">
+                    Research Project
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* UTS Course Enrolment Automation */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-indigo-500/50 transition-colors h-full flex flex-col">
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  UTS Course Registration System
+                </h3>
+                <p className="text-indigo-400 font-medium">Personal Automation • 2020</p>
+              </div>
+              
+              <p className="text-gray-300 mb-6 flex-grow">
+                Automated course registration system built for personal use during university studies. 
+                Features real-time monitoring and automated response mechanisms with compliance-focused 
+                web scraping while maintaining system security standards.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "asyncio", "Web Scraping", "BeautifulSoup"].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <div className="px-4 py-2 bg-gray-700/50 rounded-lg text-center text-gray-500">
+                    Personal Project
                   </div>
                 </div>
               </div>
@@ -485,15 +549,18 @@ export default function Home() {
                   <p className="text-gray-300">Bachelor of Science in Information Technology</p>
                   <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm mb-6">
-                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
                     GPA 6.38/7.00
                   </span>
-                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
+                  <span className="px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm">
                     WAM 84.12/100
                   </span>
-                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
-                    Dean&apos;s List
+                  <span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                    Dean&apos;s List 2022
+                  </span>
+                  <span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                    Dean&apos;s List 2025
                   </span>
                 </div>
               </div>
