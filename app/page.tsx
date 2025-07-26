@@ -1,13 +1,84 @@
+'use client'
+
 import { Mail, Github, ChevronDown } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState('hero')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['hero', 'live-projects', 'archive-projects', 'about']
+      
+      // Check if we're near the bottom of the page (last section should be active)
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        setActiveSection('about')
+        return
+      }
+      
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top <= 100 && rect.bottom >= 100
+        }
+        return false
+      })
+      if (currentSection) {
+        setActiveSection(currentSection)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleNavClick = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* About Me Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
+      {/* Floating Navigation */}
+      <nav className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
+        <div className="flex flex-col space-y-4">
+          <button 
+            onClick={() => handleNavClick('hero')}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              activeSection === 'hero' ? 'bg-blue-400' : 'bg-gray-600 hover:bg-blue-400'
+            }`}
+            title="Hero"
+          />
+          <button 
+            onClick={() => handleNavClick('live-projects')}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              activeSection === 'live-projects' ? 'bg-green-400' : 'bg-gray-600 hover:bg-green-400'
+            }`}
+            title="Live Projects"
+          />
+          <button 
+            onClick={() => handleNavClick('archive-projects')}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              activeSection === 'archive-projects' ? 'bg-gray-400' : 'bg-gray-600 hover:bg-gray-400'
+            }`}
+            title="Archive Projects"
+          />
+          <button 
+            onClick={() => handleNavClick('about')}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              activeSection === 'about' ? 'bg-cyan-400' : 'bg-gray-600 hover:bg-cyan-400'
+            }`}
+            title="About Me"
+          />
+        </div>
+      </nav>
+      {/* Hero Section */}
+      <section id="hero" className="min-h-screen relative bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 py-20">
+        {/* Main Content - Centered */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Joonghyuk Seong
@@ -41,96 +112,17 @@ export default function Home() {
               </a>
             </div>
           </div>
-          
-          {/* Info Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Education */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
-              <div className="space-y-3">
-                <div>
-                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
-                  <p className="text-gray-300">Bachelor of Science in Information Technology</p>
-                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
-                </div>
-                <div className="flex flex-wrap gap-4 text-sm mb-4">
-                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
-                    GPA 6.38/7.00
-                  </span>
-                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
-                    WAM 84.12/100
-                  </span>
-                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
-                    Dean&apos;s List
-                  </span>
-                </div>
-                <div className="flex gap-2">
-                  <a 
-                    href="/resume.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📄 Resume
-                  </a>
-                  <a 
-                    href="/transcript.pdf" 
-                    download
-                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
-                  >
-                    📜 Transcript
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Core Technologies */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Core Technologies</h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">Primary Focus</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["Python", "Next.js", "TypeScript", "FastAPI"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">AI & Data</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["OpenCV", "YOLOv11", "PyTorch", "Computer Vision"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-gray-300 font-medium mb-2">Infrastructure</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["AWS", "MongoDB", "PostgreSQL", "Git"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-400 text-sm mb-2">Explore My Work</p>
-            <ChevronDown className="mx-auto animate-bounce text-gray-400" size={24} />
-          </div>
+        </div>
+        
+        {/* Scroll Indicator - Bottom */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+          <p className="text-gray-500 text-sm mb-2">See My Projects</p>
+          <ChevronDown className="mx-auto animate-bounce text-gray-500" size={20} />
         </div>
       </section>
 
       {/* Live Projects Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section id="live-projects" className="py-20 px-6 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
@@ -311,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* Archive Projects Section */}
-      <section className="py-20 px-6">
+      <section id="archive-projects" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
@@ -466,6 +458,99 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section id="about" className="py-20 px-6 bg-gray-800/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                About Me
+              </span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Background and technical expertise
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Education */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
+                  <p className="text-gray-300">Bachelor of Science in Information Technology</p>
+                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
+                </div>
+                <div className="flex flex-wrap gap-4 text-sm mb-4">
+                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                    GPA 6.38/7.00
+                  </span>
+                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full">
+                    WAM 84.12/100
+                  </span>
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full">
+                    Dean&apos;s List
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  <a 
+                    href="/resume.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📄 Resume
+                  </a>
+                  <a 
+                    href="/transcript.pdf" 
+                    download
+                    className="flex-1 px-3 py-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-center text-sm"
+                  >
+                    📜 Transcript
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Tech Stack</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Languages & Frameworks</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "TypeScript", "Next.js", "FastAPI", "Django", "Node.js"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">AI & Machine Learning</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["OpenCV", "YOLOv11", "PyTorch", "TensorFlow"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Database & Cloud</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["MongoDB", "PostgreSQL", "AWS", "Git"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-gray-800">
