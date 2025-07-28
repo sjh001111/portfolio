@@ -154,7 +154,7 @@ export default function Home() {
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
-                AI-powered SaaS platform that analyzes resumes, salary expectations, and other documents 
+                AI-powered SaaS platform that analyses resumes, salary expectations, and other documents 
                 against job postings using multiple languages and criteria to provide intelligent 
                 compatibility matching and recommendations.
               </p>
