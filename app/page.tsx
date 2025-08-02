@@ -511,7 +511,7 @@ export default function Home() {
                   download
                   className="flex-1 px-3 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors text-center text-sm"
                 >
-                  📄 Resume
+                  📄 Résumé
                 </a>
                 <a 
                   href="/transcript.pdf" 
