@@ -412,7 +412,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "aiohttp", "lxml", "AI/ML"].map((tech) => (
+                  {["Python", "aiohttp", "lxml", "AI/ML", "MongoDB"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
                       {tech}
                     </span>
