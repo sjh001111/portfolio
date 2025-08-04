@@ -404,9 +404,10 @@ export default function Home() {
               </div>
               
               <p className="text-gray-300 mb-6 flex-grow">
-                Automated system that scrapes product recommendation requests from online forums, 
-                analyses them using AI to generate personalised recommendations, and converts them 
-                into affiliate marketing links.
+                Scraped product recommendation requests from Korean online communities and provided 
+                AI-generated product recommendations with affiliate links through blog posts and comments. 
+                Generated KRW 160M in sales and KRW 3.6M in revenue through Coupang Partners, 
+                and USD 2,500 in revenue through AliExpress Affiliate.
               </p>
               
               <div className="space-y-4">
