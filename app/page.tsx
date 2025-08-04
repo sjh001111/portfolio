@@ -490,6 +490,43 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Kakao Emoticon Bot */}
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-yellow-500/50 transition-colors h-full flex flex-col">
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Kakao Emoticon Bot
+                </h3>
+                <p className="text-yellow-400 font-medium">Discord Bot • 2022</p>
+              </div>
+              
+              <p className="text-gray-300 mb-6 flex-grow">
+                Discord bot that downloads and converts KakaoTalk emoticons. Features automatic 
+                decryption of encrypted files, WebP to GIF conversion, and ZIP packaging. 
+                Supports fast WebP downloads and automated conversion via web automation.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "discord.py", "Selenium", "Web Automation"].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href="https://github.com/sjh001111/kakao-emoticon-bot" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded-lg transition-colors text-center"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* UTS Course Enrolment Automation */}
             <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-indigo-500/50 transition-colors h-full flex flex-col">
               <div className="mb-4">
@@ -544,11 +581,18 @@ export default function Home() {
             <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 flex flex-col">
               <h3 className="text-xl font-semibold text-blue-400 mb-4">Education</h3>
               <div className="flex-grow">
-                <div className="mb-4">
-                  <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
+                <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img 
+                      src="https://www.uts.edu.au/globalassets/restricted/media/all-pages-sitewide/header/restricteduts-logoheader.svg" 
+                      alt="UTS Logo" 
+                      className="h-8 w-auto opacity-90" 
+                    />
+                    <h4 className="text-lg font-medium text-white">University of Technology Sydney</h4>
+                  </div>
                   <p className="text-gray-300">Bachelor of Science in Information Technology</p>
-                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2019-2024</p>
-                </div>
+                  <p className="text-gray-400 text-sm">Enterprise Systems Development • 2020-2024</p>
+                </div>                
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
                     GPA 6.38/7.00
@@ -562,6 +606,18 @@ export default function Home() {
                   <span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
                     Dean&apos;s List 2025
                   </span>
+                </div>
+                <div className="mb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img 
+                      src="https://www.ieniedu.com/media/es5gnvv3/favicon.ico" 
+                      alt="IEN Institute Logo" 
+                      className="h-8 w-auto opacity-90" 
+                    />
+                    <h4 className="text-lg font-medium text-white">UTS College Seoul (IEN Institute)</h4>
+                  </div>
+                  <p className="text-gray-300">Diploma of Information Technology</p>
+                  <p className="text-gray-400 text-sm">Transnational Education Program • 2019</p>
                 </div>
               </div>
               <div className="flex gap-2 mt-auto">
@@ -583,13 +639,13 @@ export default function Home() {
             </div>
 
             {/* Tech Stack */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 flex flex-col">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Tech Stack</h3>
-              <div className="space-y-3">
+              <div className="space-y-3 flex-grow">
                 <div>
-                  <p className="text-gray-300 font-medium mb-2">Languages & Frameworks</p>
+                  <p className="text-gray-300 font-medium mb-2">Programming Languages</p>
                   <div className="flex flex-wrap gap-2">
-                    {["Python", "TypeScript", "Next.js", "FastAPI", "Django", "Node.js"].map((skill) => (
+                    {["Python", "JavaScript", "TypeScript", "C++", "HTML", "CSS"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
                         {skill}
                       </span>
@@ -597,10 +653,20 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium mb-2">AI & Machine Learning</p>
+                  <p className="text-gray-300 font-medium mb-2">Web Development</p>
                   <div className="flex flex-wrap gap-2">
-                    {["OpenCV", "YOLOv11", "PyTorch", "TensorFlow"].map((skill) => (
+                    {["FastAPI", "Django", "React", "Next.js", "Node.js"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Computer Vision</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["OpenCV", "YOLOv11"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-sm">
                         {skill}
                       </span>
                     ))}
@@ -609,8 +675,18 @@ export default function Home() {
                 <div>
                   <p className="text-gray-300 font-medium mb-2">Database & Cloud</p>
                   <div className="flex flex-wrap gap-2">
-                    {["MongoDB", "PostgreSQL", "AWS", "Git"].map((skill) => (
+                    {["MongoDB", "PostgreSQL", "MySQL", "AWS"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-medium mb-2">Tools & Workflow</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Git", "Jira", "Confluence"].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-sm">
                         {skill}
                       </span>
                     ))}
