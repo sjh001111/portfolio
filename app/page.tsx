@@ -594,16 +594,16 @@ export default function Home() {
                   <p className="text-gray-400 text-sm">Enterprise Systems Development • 2020-2024</p>
                 </div>                
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
-                    GPA 6.38/7.00
+                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                    GPA 6.38
                   </span>
-                  <span className="px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm">
-                    WAM 84.12/100
+                  <span className="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-sm">
+                    WAM 84.12
                   </span>
-                  <span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
-                    Dean&apos;s List 2022
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                    Dean&apos;s List
                   </span>
-                  <span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
                     Dean&apos;s List 2025
                   </span>
                 </div>
@@ -618,6 +618,14 @@ export default function Home() {
                   </div>
                   <p className="text-gray-300">Diploma of Information Technology</p>
                   <p className="text-gray-400 text-sm">Transnational Education Program • 2019</p>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                    Top Graduate
+                  </span>
+                  <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
+                    $5,000 Scholarship
+                  </span>
                 </div>
               </div>
               <div className="flex gap-2 mt-auto">
