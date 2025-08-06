@@ -602,7 +602,7 @@ export default function Home() {
                     WAM 84.12
                   </span>
                   <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
-                    Dean&apos;s List
+                    Dean&apos;s List 2022
                   </span>
                   <span className="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">
                     Dean&apos;s List 2025
