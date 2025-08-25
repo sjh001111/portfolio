@@ -42,20 +42,6 @@ export const liveProjects: Project[] = [
     }
   },
   {
-    id: 'twihub',
-    title: 'TwiHub',
-    type: 'Video Downloader',
-    year: '2025',
-    description: 'Twitter video download platform that allows users to easily save videos from Twitter posts. Features clean interface, fast processing, and support for various video qualities and formats.',
-    tech: ['Next.js', 'FastAPI', 'Python', 'Video Processing'],
-    color: 'cyan',
-    links: {
-      demo: { url: '/twihub', text: '🎥 Try TwiHub' },
-      frontend: { url: 'https://github.com/sjh001111/twihub-frontend', text: 'Frontend' },
-      backend: { url: 'https://github.com/sjh001111/twihub-backend', text: 'Backend' }
-    }
-  },
-  {
     id: 'portfolio',
     title: 'Portfolio Website',
     type: 'Personal Website',
@@ -71,6 +57,19 @@ export const liveProjects: Project[] = [
 ]
 
 export const archiveProjects: Project[] = [
+  {
+    id: 'twihub',
+    title: 'TwiHub',
+    type: 'Video Downloader',
+    year: '2025',
+    description: 'Twitter video download platform that allows users to easily save videos from Twitter posts. Features clean interface, fast processing, and support for various video qualities and formats.',
+    tech: ['Next.js', 'FastAPI', 'Python', 'Video Processing'],
+    color: 'cyan',
+    links: {
+      frontend: { url: 'https://github.com/sjh001111/twihub-frontend', text: 'Frontend' },
+      backend: { url: 'https://github.com/sjh001111/twihub-backend', text: 'Backend' }
+    }
+  },
   {
     id: 'yolo-detection',
     title: 'YOLO License Plate Detection',
