@@ -87,11 +87,11 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4">
-              Full-Stack Developer & AI Enthusiast
+              Software Developer
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-              Python-focused developer with expertise in AI, web technologies, and system automation.
-              Recent UTS graduate with Dean&apos;s List recognition.
+              Python-focused developer building practical web products, AI tooling, and automation systems.
+              UTS IT graduate with Dean&apos;s List recognition.
             </p>
             
             {/* Contact Buttons */}

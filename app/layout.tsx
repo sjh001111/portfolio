@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Joonghyuk Seong | Software Developer',
-  description: 'Software Developer currently seeking opportunities in Australia.',
-  keywords: ['Joonghyuk Seong', 'Software Developer', 'Python', 'Web Development', 'Australia'],
+  description: 'Portfolio of Joonghyuk Seong, a Python-focused software developer building web products, AI tooling, and automation systems.',
+  keywords: ['Joonghyuk Seong', 'Software Developer', 'Python', 'Web Development', 'AI', 'Automation'],
   authors: [{ name: 'Joonghyuk Seong' }],
   openGraph: {
     title: 'Joonghyuk Seong | Software Developer',
-    description: 'Software Developer currently seeking opportunities in Australia',
+    description: 'Portfolio of Joonghyuk Seong, a Python-focused software developer building web products, AI tooling, and automation systems.',
     url: 'https://joonghyukseong.com',
     siteName: 'Joonghyuk Seong Portfolio',
     locale: 'en_AU',
