@@ -28,20 +28,6 @@ export interface Project {
 
 export const liveProjects: Project[] = [
   {
-    id: 'jobmatch',
-    title: 'JobMatch',
-    type: 'Full-Stack Web App',
-    year: '2025',
-    description: 'AI-powered SaaS platform that analyses resumes, salary expectations, and other documents against job postings using multiple languages and criteria to provide intelligent compatibility matching and recommendations.',
-    tech: ['Next.js', 'FastAPI', 'Python', 'AI/ML'],
-    color: 'green',
-    links: {
-      demo: { url: '/jobmatch', text: '🚀 Launch App' },
-      frontend: { url: 'https://github.com/sjh001111/jobmatch-frontend', text: 'Frontend' },
-      backend: { url: 'https://github.com/sjh001111/jobmatch-backend', text: 'Backend' }
-    }
-  },
-  {
     id: 'portfolio',
     title: 'Portfolio Website',
     type: 'Personal Website',
@@ -57,6 +43,19 @@ export const liveProjects: Project[] = [
 ]
 
 export const archiveProjects: Project[] = [
+  {
+    id: 'jobmatch',
+    title: 'JobMatch',
+    type: 'Full-Stack Web App',
+    year: '2025',
+    description: 'Archived AI-powered SaaS platform for analysing resumes, salary expectations, and supporting documents against job postings across multiple languages and criteria. The public demo has been retired.',
+    tech: ['Next.js', 'FastAPI', 'Python', 'AI/ML'],
+    color: 'green',
+    links: {
+      frontend: { url: 'https://github.com/sjh001111/jobmatch-frontend', text: 'Frontend' },
+      backend: { url: 'https://github.com/sjh001111/jobmatch-backend', text: 'Backend' }
+    }
+  },
   {
     id: 'yolo-detection',
     title: 'YOLO License Plate Detection',

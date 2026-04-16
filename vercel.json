@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/jobmatch/:path*",
-      "destination": "https://jobmatch-frontend.vercel.app/:path*",
-      "permanent": false
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
