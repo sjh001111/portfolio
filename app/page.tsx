@@ -302,7 +302,7 @@ export default function Home() {
       <footer className="py-8 px-6 border-t border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2026 Joonghyuk Seong.
+            © {new Date().getFullYear()} Joonghyuk Seong.
           </p>
         </div>
       </footer>
